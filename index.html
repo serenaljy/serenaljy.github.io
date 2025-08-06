@@ -85,13 +85,12 @@
         // See documentation (https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-sso?tabs=webApp)
         const clientId = 9eb43b97-cab3-4347-8631-5c7790d3dfb3
         const tenantId = 9c423646-8b9f-4a07-b1c9-f3219ddc0203
-        const tokenEndpoint = https://bff3c309cfe5eb4e848ee296321b9c.0f.environment.api.powerplatform.com/copilotstudio/dataverse-backed/authenticated/bots/crcaa_customSsoAgent/conversations?api-version=2022-03-01-preview // you can find the token URL via the Mobile app channel configuration
-
+        const tokenEndpoint = https://bff3c309cfe5eb4e848ee296321b9c.0f.environment.api.powerplatform.com/copilotstudio/dataverse-backed/authenticated/bots/crcaa_customSsoAgent/conversations?api-version=2022-03-01-preview
         // Config object to be passed to Msal on creation
         const msalConfig = {
             auth: {
                 clientId: clientId,
-                authority: "https://login.microsoftonline.com/" + tenantId
+                authority: "https://login.microsoftonline.com/9c423646-8b9f-4a07-b1c9-f3219ddc0203"
             },
             cache: {
                 cacheLocation: "sessionStorage", // This configures where your cache will be stored
