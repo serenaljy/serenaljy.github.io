@@ -186,6 +186,7 @@
 
             try {
                 const tokenResponse = await msalInstance.acquireTokenSilent(tokenRequest)
+                console.log(tokenResponse)
                 return tokenResponse.accessToken;
             } catch (err) {
                 console.log(err)
@@ -261,6 +262,7 @@
 
                             exchangeTokenAsync(resourceUri).then((token) => {
                                 if (token) {
+                                    console.log("Posting to Direct Line")
                                     directLine.postActivity({
                                         type: 'invoke',
                                         name: 'signin/tokenExchange',
